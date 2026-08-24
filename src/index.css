@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ink: #1b1c1a;
+    --paper: #f7f5ef;
+    --panel: #fffefa;
+    --line: #e6e2d8;
+    --muted: #88857d;
+    --wash: #f0ede5;
+    --coral: #ef765d;
+    --green: #54a886;
+    --gold: #d8ad4a;
+  }
+
+  :root[data-theme='dark'] {
+    --ink: #f4f0e7;
+    --paper: #20211f;
+    --panel: #292a27;
+    --line: #3a3b36;
+    --muted: #a6a49c;
+    --wash: #33342f;
+  }
+
+  html {
+    @apply min-w-[320px] bg-paper;
+  }
+
+  body {
+    @apply m-0 bg-paper font-sans text-ink antialiased;
+  }
+
+  *,
+  *::before,
+  *::after {
+    @apply box-border;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    @apply m-0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.035em;
+  }
+
+  button,
+  input,
+  select {
+    @apply font-sans;
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  select:focus-visible {
+    @apply outline outline-2 outline-coral outline-offset-2;
+  }
+}
